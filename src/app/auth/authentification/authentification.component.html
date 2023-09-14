@@ -1,17 +1,18 @@
-<form>
+<form (submit)="authentification()">
     <div class="mb-3">
         <h2 class="text-center">Authentification</h2>
         
       </div>
     <div class="mb-3">
       <label class="form-label">Email </label>
-      <input type="email" class="form-control" name="email">
+      <input type="email" [(ngModel)]="username" class="form-control" name="email">
       
     </div>
     <div class="mb-3">
       <label  class="form-label">Mot de passe</label>
-      <input type="password" class="form-control" name="password">
+      <input type="password" class="form-control" [(ngModel)]="password"  name="password">
     </div>
    
     <button type="submit" class="btn btn-primary">Submit</button>
+    <br><a routerLink="./register">s'inscrire</a>
   </form>

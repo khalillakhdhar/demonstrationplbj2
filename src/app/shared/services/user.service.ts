@@ -22,13 +22,22 @@ export class UserService {
   public authUser(username:string, password:string): boolean {
 
     for(let user of this.users) {
-  if(user.username === username && user.password === password) {
+  if(user.email === username && user.password === password) {
   this.loggedIn = true;
+  let currentUser = user;
+  localStorage.setItem('currentUser', JSON.stringify(currentUser));
+  localStorage.setItem('etat',"connected");
   return true;
   }
 }
   
 return false;  
+
+}
+public deconnexion(): void {
+localStorage.removeItem('currentUser');
+localStorage.setItem('etat',"not connected");
+
 
 }
 
