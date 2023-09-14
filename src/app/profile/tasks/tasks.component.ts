@@ -25,4 +25,10 @@ getTasks():Task[]
   return  this.taches;
   
 }
+addtaches()
+{
+  this.tasksService.addTask(this.task);
+  this.getTasks();
+  this.task=new Task();
+}
 }
