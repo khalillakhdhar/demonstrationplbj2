@@ -5,17 +5,20 @@ import { ProfileRoutingModule } from './profile-routing.module';
 import { ProfileComponent } from './profile.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
 import { TasksComponent } from './tasks/tasks.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     ProfileComponent,
     UserprofileComponent,
-    TasksComponent
+    TasksComponent,
+    
   ],
   imports: [
     CommonModule,
-    ProfileRoutingModule
+    ProfileRoutingModule,
+    FormsModule
   ]
 })
 export class ProfileModule { }
