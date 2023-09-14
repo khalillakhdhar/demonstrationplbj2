@@ -4,3 +4,8 @@ tache: <input name="tache" type="text" [(ngModel)]="task.tache"  placeholder="vo
 <button type="submit" class="btn btn-primary">Ajouter</button>
 
 </form>
+<ul>
+    <li *ngFor="let t of taches">
+        {{t.tache}}
+    </li>
+</ul>
