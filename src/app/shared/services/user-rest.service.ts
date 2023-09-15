@@ -11,17 +11,17 @@ export class UserRestService {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
   users:User[]=[];
-  userUrl="http://localhost:8080/user";
+  userUrl="http://localhost:8080/api/users/";
   constructor( private http: HttpClient) { }
   getUsers()
   {
-   return this.http.get<User[]>(this.userUrl);
+   return this.http.get<User[]>(this.userUrl+"/list");
 
 
   }
   addUser(user:User)
   {
-    this.http.post(this.userUrl,user);
+    return this.http.post(this.userUrl+"/add",user);
   }
   deleteUser(userId: number): Observable<any> {
     return this.http.delete(`${this.userUrl}/${userId}`);

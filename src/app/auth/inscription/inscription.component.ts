@@ -12,7 +12,7 @@ export class InscriptionComponent {
   user: User=new User();
   constructor(private router: Router, private userService:UserService)
   {
-    
+    this.user.active=1;
   }
   public subscribe()
   {

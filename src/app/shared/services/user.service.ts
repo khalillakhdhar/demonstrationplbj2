@@ -22,7 +22,7 @@ export class UserService {
   public authUser(username:string, password:string): boolean {
 
     for(let user of this.users) {
-  if(user.email === username && user.password === password) {
+  if(user.username === username && user.password === password) {
   this.loggedIn = true;
   let currentUser = user;
   localStorage.setItem('currentUser', JSON.stringify(currentUser));
