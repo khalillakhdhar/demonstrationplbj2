@@ -25,6 +25,6 @@ export class TachesRestService {
    return this.http.post(this.tacheUrl,tache);
   }
   deleteTaches(tacheId: number): Observable<any> {
-    return this.http.delete(`${this.tacheUrl}/${tacheId}`);
+    return this.http.delete(this.tacheUrl+"/"+tacheId);
   }
 }

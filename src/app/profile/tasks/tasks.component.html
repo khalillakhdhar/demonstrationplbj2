@@ -5,8 +5,8 @@ tache: <input name="tache" type="text" [(ngModel)]="task.tache"  placeholder="vo
 
 </form>
 <ul>
-    <li *ngFor="let t of taches;let $i=index">
-       {{$i}} {{t.tache}} &nbsp;&nbsp;<button (click)="deleteTache($i)" class="btn btn-danger"> X </button>
+    <li *ngFor="let t of taches">
+     {{t.tache}} &nbsp;&nbsp;<button (click)="deleteTache(t.id)" class="btn btn-danger"> X </button>
         <br>
     </li>
 </ul>
